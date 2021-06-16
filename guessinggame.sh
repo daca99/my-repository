@@ -4,7 +4,7 @@ declare -i numFiles
 numFiles=$(find . -maxdepth 1 -not -type d | wc --lines)
 
 function makeValidGuess {
-	until read -p "Enter your guess:  " guess;
+	until read -p "Enter your guess :  " guess;
 	[[ "$guess" =~ ^[0-9]+$ ]]; do
 		echo -e "\nEnter unnegative number!\n"
 	done
